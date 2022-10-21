@@ -34,6 +34,8 @@ def vi_func_hook(tokens):
     return modify_pattern(tokens, [('d', '__fastcall'),])
 
 
+
+
 def build():
     build_lib(header_info, lib_names, '_tlccslib', __file__, token_hooks=(vi_func_hook,),
               preamble=preamble)
